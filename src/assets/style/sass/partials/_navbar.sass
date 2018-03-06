@@ -1,17 +1,23 @@
+html,
 body
   height: 100%
+
+body
   font-family: $font
   background:
     image: linear-gradient(111.30deg, rgba(248, 197, 91, 1) 14%, rgba(248, 97, 55, 1) 87%)
     repeat: no-repeat
     position: center center
     size: cover
+  display: flex
+  flex-direction: column
 
 .container
   display: flex
   justify-content: center
   align-items: center
-  flex-flow: column nowrap
+  flex-flow: row nowrap
+  flex: 1 0 auto
 
   .app-title
     font-size: 3em
@@ -22,6 +28,9 @@ body
 
   .instruction-col
     text-align: center
+
+  .instruction-items
+    margin-right: 2em
 
   .size-div
     display: flex
