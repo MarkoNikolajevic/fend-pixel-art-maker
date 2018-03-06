@@ -15,6 +15,7 @@ function makeGrid() {
       // Colore cell on click
       cell.addEventListener("click", function() {
         cell.style.backgroundColor = document.querySelector("#colorPicker").value;
+        cell.style.transition = "all 400ms ease-in-out";
       });
     }
   }
@@ -24,11 +25,13 @@ function makeGrid() {
 document.querySelector("#create").addEventListener("click", function(e) {
   e.preventDefault();
   makeGrid();
+  grid.classList.add("fadeIn");
 });
 
 // Remove grid on click
 document.querySelector("#reset").addEventListener("click", function(e) {
   if (grid.firstChild) {
     grid.removeChild(grid.firstChild);
+    grid.classList.remove("fadeIn");
   }
 });
