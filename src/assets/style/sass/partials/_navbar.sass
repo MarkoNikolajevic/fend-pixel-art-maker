@@ -1,4 +1,48 @@
 body
-  height: 100vh
+  height: 100%
   font-family: $font
-  background: linear-gradient(111.30deg, rgba(248, 197, 91, 1) 14%, rgba(248, 97, 55, 1) 87%)
+  background:
+    image: linear-gradient(111.30deg, rgba(248, 197, 91, 1) 14%, rgba(248, 97, 55, 1) 87%)
+    repeat: no-repeat
+    position: center center
+    size: cover
+
+.container
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-flow: column nowrap
+
+  .app-title
+    font-size: 3em
+
+  .instruction-label
+    font-size: 1.5em
+    letter-spacing: 1px
+
+  .instruction-col
+    text-align: center
+
+  .size-div
+    display: flex
+    align-items: center
+
+    label
+      font-size: 1em
+      margin: 10px
+
+    input[type=number]
+      padding-left: 5px
+
+  .button-div
+    margin-top: 1em
+
+    #create
+      +button
+      background: #039be5
+      border-color: #039be5
+
+    #reset
+      +button
+      background: #e53935
+      border-color: #e53935
